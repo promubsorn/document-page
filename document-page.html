@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+   <style>
+      :root{
+        --color1: #1b325f;
+        --color2: #9cc4e4;
+        --color3: #e9f2f9;
+        --color4: #f26c4f;
+        --color5: rgba(255, 255, 255, 0.409);
+        --color6: #f26d4fe7;
+      }
+      *{
+        box-sizing: border-box;
+        font-family: 'Ubuntu', sans-serif;;
+      }
+      body{
+        display: flex;
+        flex-direction: row;
+        margin: 2.5%;
+        justify-content: space-between;
+      }
+      aside{
+        width: 20%;
+      }
+      #navbar, main{
+        padding: 2rem;
+        margin: 0;
+        border-radius: 20px;
+        
+      }
+
+      #navbar{
+        position: sticky;
+        top: 2.5%;
+        background-color: var(--color3);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.055), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+      }
+      main{
+        width: 75%;
+      }
+      nav>header{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: var(--color1);
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .link-container{
+        display: flex;
+        flex-direction: column;
+      }
+      hr{
+        background-color: var(--color1);
+        margin: 0;
+        margin-bottom: 1rem;
+        height: 1.75px;
+      }
+      .nav-link{
+        padding: 0.75em;
+        background-color: var(--color5);
+        margin: 0.2em;
+        border-radius: 10px;
+        color: var(--color1);
+        font-size: 1.2rem;
+      }
+      .nav-link:hover{
+        text-decoration: none;
+        background-color: var(--color6);
+        color: var(--color3);
+      }
+
+      code:not(pre code){
+        border-left: var(--color4) solid 2px;
+      }
+      pre{
+        border-left: #7dac66 solid 8px;
+        background-color: #7dac660f;
+        margin: 5% auto;
+      }
+      section header{
+        font-size: 3rem;
+        text-align: center;
+        background-color: var(--color3);
+        padding: 2rem;
+        font-weight: bold;
+        color: var(--color1);
+        margin-bottom: 5%;
+      }
+
+      .section{
+        margin-top: 5%;
+      }
+
+      h4{
+        color: var(--color4);
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+      }
+     
+
+    #noted{
+      background-color: #f3c4076b;
+      padding: 2rem;
+      border-left: 10px solid #f3c407;
+      border-radius: 20px;
+      width: 80%;
+      margin: 5rem auto;
+    }
+    #noted h5{
+      margin-top: 0;
+    }
+    legend{
+      border: none;
+      margin-bottom: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #e6b800;
+
+    }
+    @media only screen and (max-width: 768px) {
+      /* body{
+        flex-direction: column;
+      } */
+      aside{
+        width: 20vw;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        
+      }
+      #navbar{
+        padding: 0.5rem;
+      }
+      .nav-link{
+        padding: 0.2em;
+        font-size: 1.25rem;
+      }
+      main{
+        width: 70vw;
+        height: auto;
+        margin: 0 auto;
+        background-color: rgba(247, 247, 247, 0.671);
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <nav id="navbar">
+        <header>Intro to Bootstrap</header>
+        <hr>
+        <div class="link-container">
+          <a href="#Bootstrap_Get_Started" class="nav-link">Bootstrap Get Started</a>
+          <a href="#Create_First_Web_Page_With_Bootstrap" class="nav-link">Create First Web Page With Bootstrap</a>
+          <a href="#Two_Basic_Bootstrap_Pages" class="nav-link">Two Basic Bootstrap Pages</a>
+          <a href="#Bootstrap_Alerts" class="nav-link">Bootstrap Alerts</a>
+          <a href="#Bootstrap_Buttons" class="nav-link">Bootstrap Buttons</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main id="main-doc">
+    <section class="main-section" id="Bootstrap_Get_Started">
+      <header>Bootstrap Get Started</header>
+      
+        <p  id="sec1">
+          <h4>What is Bootstrap?</h4>
+          <ul>
+            <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+            <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+            <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+          </ul>
+        </p>
+        <fieldset id="noted">
+          <legend>Noted</legend>
+          <h5><strong>What is Responsive Web Design?</strong></h5>
+          <p>Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.</p>
+        </fieldset>
+
+      
+      <p>
+       
+        <pre>
+          <h5 style="margin-top: 0; margin-bottom: 0; font-size: 1.75rem; font-weight: bold;">Bootstrap Example</h5>
+          <code>
+            &lt;div class="jumbotron text-center"&gt;
+              &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;
+                &lt;p&gt;Resize this responsive page to see the effect!&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="row"&gt;
+                &lt;div class="col-sm-4"&gt;
+                  &lt;h3&gt;Column 1&lt;/h3&gt;
+                    &lt;p&gt;Lorem ipsum dolor..&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-4"&gt;
+                  &lt;h3&gt;Column 2&lt;/h3&gt;
+                  &lt;p&gt;Lorem ipsum dolor..&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-4"&gt;
+                  &lt;h3&gt;Column 3&lt;/h3&gt;
+                  &lt;p&gt;Lorem ipsum dolor..&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </p>
+      <p>
+        <h4>Bootstrap History</h4>
+        <div>Bootstrap was developed by Mark Otto and Jacob Thornton at Twitter, and released as an open source product in August 2011 on GitHub.<span>In June 2014 Bootstrap was the No.1 project on GitHub!</span></div>
+      </p>
+      <p>
+        <h4>Why Use Bootstrap?</h4>
+        <ul>
+          <li><b>Easy to use</b>: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap</li>
+          <li><b>Responsive features</b>: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops</li>
+          <li><b>Mobile-first approach</b>: In Bootstrap 3, mobile-first styles are part of the core framework</li>
+          <li><b>Browser compatibility</b>: Bootstrap is compatible with all modern browsers (Chrome, Firefox, Internet Explorer, Edge, Safari, and Opera)</li>
+        </ul>
+      </p>
+      <p>
+        <h4>Bootstrap Versions</h4>
+        <div>This tutorial follows Bootstrap 3, which was released in 2013. However, we also cover newer versions; Bootstrap 4 (released 2018) and Bootstrap 5 (released 2021).</div>
+        <div>Bootstrap 5 is the newest version of Bootstrap; with new components, faster stylesheets, more responsiveness etc. It supports the latest, stable releases of all major browsers and platforms. However, Internet Explorer 11 and down is not supported.</div>
+        <div>The main differences between Bootstrap 5 and Bootstrap 3 & 4, is that Bootstrap 5 has switched to JavaScript instead of jQuery.</div>
+      </p>
+      <fieldset id="noted">
+        <legend>Noted</legend>
+        <p>Bootstrap 3 and Bootstrap 4 is still supported by the team for critical bugfixes and documentation changes, and it is perfectly safe to continue to use them. However, new features will NOT be added to them.</p>
+      </fieldset>
+      
+      <p>
+        <h4>Where to Get Bootstrap?</h4>
+        <div>There are two ways to start using Bootstrap on your own web site.</div>
+        <ul>
+          <li>Download Bootstrap from getbootstrap.com</li>
+          <li>Include Bootstrap from a CDN</li>
+        </ul>
+      </p>
+      <p>
+        <h4>Downloading Bootstrap</h4>
+        <div>If you want to download and host Bootstrap yourself, go to <a href="http://getbootstrap.com/getting-started/">getbootstrap.com</a>, and follow the instructions there.</div>
+      </p>
+    </section>
+    <section class="main-section section" id="Create_First_Web_Page_With_Bootstrap">
+      <header>Create First Web Page With Bootstrap</header>
+      <p>
+        <h4>Add the HTML5 doctype</h4>
+        <div>Bootstrap uses HTML elements and CSS properties that require the HTML5 doctype.
+          Always include the HTML5 doctype at the beginning of the page, along with the lang attribute and the correct character set:</div>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+              &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+        </p>
+      <p>
+        <h4>Bootstrap 3 is mobile-first</h4>
+        <div>
+          Bootstrap 3 is designed to be responsive to mobile devices. Mobile-first styles are part of the core framework.
+          To ensure proper rendering and touch zooming, add the following <code>&lt;meta&gt;</code> tag inside the <code>&lt;head&gt;</code> element:
+        </div>
+        <pre>
+          <code>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+          </code>
+        </pre>
+        <div>
+          The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+          The <code>initial-scale=1</code> part sets the initial zoom level when the page is first loaded by the browser.
+        </div>
+      </p>
+      <p>
+        <h4>Containers</h4>
+        <div>
+          Bootstrap also requires a containing element to wrap site contents.
+        </div>
+        <ul>
+          <label>There are two container classes to choose from:</label>
+          <li>The <code>.container</code> class provides a responsive fixed width container</li>
+          <li>The <code>.container-fluid</code> class provides a full width container, spanning the entire width of the viewport</li>
+        </ul>
+      </p>
+    </section>
+    <section class="main-section section" id="Two_Basic_Bootstrap_Pages">
+      <header>Two Basic Bootstrap Pages</header>
+      <p>The following example shows the code for a basic Bootstrap page (with a responsive fixed width container):</p>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Bootstrap Example&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+            &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"&gt;
+            &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script&gt;
+            &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">&lt;/script&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+
+          &lt;div class="container"&gt;
+            &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;
+            &lt;p&gt;This is some text.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </section>
+    <section class="main-section section" id="Bootstrap_Alerts"><header>Bootstrap Alerts</header>
+      <p>
+        <h4>Alerts</h4>
+        <div>
+          Bootstrap provides an easy way to create predefined alert messages:
+          <br>
+          <br>
+          <div>
+            <div class="alert alert-success">
+              <strong>Success!</strong> Indicates a successful or positive action.
+            </div>
+            
+            <div class="alert alert-info">
+              <strong>Info!</strong> Indicates a neutral informative change or action.
+            </div>
+            
+            <div class="alert alert-warning">
+              <strong>Warning!</strong> Indicates a warning that might need attention.
+            </div>
+            
+            <div class="alert alert-danger">
+              <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+            </div>
+          </div>
+        </div>
+      </p>
+      <p>Alerts are created with the <code>.alert</code> class, followed by one of the four contextual classes <code>.alert-success</code>, <code>.alert-info</code>, <code>.alert-warning</code> or <code>.alert-danger</code>:</p>
+      <pre>
+        <code>
+          &lt;div class="alert alert-success"&gt;
+            &lt;strong&gt;Success!&lt;/strong&gt; Indicates a successful or positive action.
+          &lt;/div&gt;
+          
+          &lt;div class="alert alert-info"&gt;
+            &lt;strong&gt;Info!&lt;/strong&gt; Indicates a neutral informative change or action.
+          &lt;/div&gt;
+          
+          &lt;div class="alert alert-warning"&gt;
+            &lt;strong&gt;Warning!&lt;/strong&gt; Indicates a warning that might need attention.
+          &lt;/div&gt;
+          
+          &lt;div class="alert alert-danger"&gt;
+            &lt;strong&gt;Danger!&lt;/strong&gt; Indicates a dangerous or potentially negative action.
+          &lt;/div&gt;
+        </code>
+      </pre>
+    </section>
+    <section class="main-section section" id="Bootstrap_Buttons"><header>Bootstrap Buttons</header>
+      <p>
+        <h4>Button Styles</h4>
+        <p>Bootstrap provides different styles of buttons:</p>
+        <div>
+          <strong>Example</strong><br>
+          <button type="button" class="btn">Basic</button>
+          <button type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-link">Link</button>
+        </div>
+      </p>
+      <p>
+        To achieve the button styles above, Bootstrap has the following classes:
+        <ul>
+          <li>.btn</li>
+          <li>.btn-default</li>
+          <li>.btn-primary</li>
+          <li>.btn-success</li>
+          <li>.btn-info</li>
+          <li>.btn-warning</li>
+          <li>.btn-danger</li>
+          <li>.btn-link</li>
+        </ul> 
+      </p>
+      <p>
+        The following example shows the code for the different button styles:
+      </p>
+      <pre>
+        <code>
+          &lt;button type="button" class="btn"&gt;Basic&lt;/button&gt;
+          &lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+          &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+          &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+          &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+          &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+          &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+          &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+        </code>
+      </pre>
+      </section>
+    </main>
+  </body>
+</html>
